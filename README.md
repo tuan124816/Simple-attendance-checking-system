@@ -1,0 +1,2 @@
+# Simple attendance checking system
+

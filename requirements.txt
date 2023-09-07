@@ -1,0 +1,9 @@
+keras-facenet
+mtcnn
+numpy
+opencv-python
+opencv-python-headless
+Pillow
+scikit-learn
+tkinter
+openpyxl
