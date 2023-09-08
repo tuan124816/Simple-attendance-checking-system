@@ -32,13 +32,13 @@ def capture_student_images(user_id):
             roi_color = cv2.resize(crop_img, (160, 160))
 
             if face_num % interval == 0:
-                img_filename = os.path.join('data/processed', user_id, f'frame_{face_num}.jpg')
+                img_filename = os.path.join('processed_data', user_id, f'frame_{face_num}.jpg')
                 cv2.imwrite(img_filename, roi_color)
 
             face_num += 1
 
         cv2.imshow('Capture', frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if face_num == 50:
             break
 
     cap.release()

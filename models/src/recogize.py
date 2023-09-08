@@ -27,8 +27,10 @@ def recognize():
     # is opened previously or not
     if (vid.isOpened() == False): 
         print("Error reading video file")
-    frame_width = vid.set(cv2.CAP_PROP_FRAME_WIDTH, 160)
-    frame_height = vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 120)
+    # frame_width = vid.set(cv2.CAP_PROP_FRAME_WIDTH, 160)
+    # frame_height = vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 120)
+    frame_width = int(vid.get(3))
+    frame_height = int(vid.get(4))
 
     size = (frame_width, frame_height)
 

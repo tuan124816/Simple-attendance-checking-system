@@ -58,7 +58,10 @@ class App:
 
     def create_model(self):
 
-        train_new_model()
+        if len(os.listdir('processed_data')) >= 2:
+            train_new_model()
+        else:
+            print('need at least 2 faces')
  
     def open_subwindow(self): # This part is for depoly model here
       
